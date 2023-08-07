@@ -13,7 +13,7 @@ function Details({ data }) {
 export default Details;
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:4000/data");
+  const res = await fetch(`${process.env.BASE_URL}/data`);
   const data = await res.json();
   const finalData = data.slice(0, 10);
   const paths = finalData.map((food) => {
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   console.log(context);
   const { menuId } = context.params;
-  const res = await fetch(`http://localhost:4000/data/${menuId}`);
+  const res = await fetch(`${process.env.BASE_URL}/data/${menuId}`);
   const data = await res.json();
   if (!data.name) {
     return {

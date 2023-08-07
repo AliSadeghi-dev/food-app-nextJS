@@ -13,7 +13,7 @@ export default menus;
 
 
 export async function getStaticProps(){
-    const data = await fetch("http://localhost:4000/data")
+    const data = await fetch(`${process.env.BASE_URL}/data`);
     const foods = await data.json();
     return{
         props:{

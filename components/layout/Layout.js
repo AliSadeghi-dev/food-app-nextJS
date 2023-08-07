@@ -9,7 +9,7 @@ function Layout({ children }) {
           <Link href="/">FoodApp</Link>
         </div>
         <div className={styles.right}>
-          <Link href="/menu">Menu</Link>
+          <Link href="/menus">Menu</Link>
           <Link href="/categories">Categories</Link>
         </div>
       </header>

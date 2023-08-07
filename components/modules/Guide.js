@@ -4,7 +4,7 @@ import styles from "./Guide.module.css";
 function Guide() {
   return (
     <div className={styles.container}>
-      <Link href="/menu">Menu</Link>
+      <Link href="/menus">Menu</Link>
       <Link href="/categories">Categories</Link>
       <Link href="/">Discount</Link>
     </div>
